@@ -1,17 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int n,remainder,largest=0;
+    int n,rem,lar=0;
     scanf("%d",&n);
     while(n>0)
     {
-        remainder=n%10;
-        if(largest<remainder)
+        rem=n%10;
+        if(lar<rem)
         {
-            largest=remainder;
+            lar=rem;
         }
         n=n/10;
     }
-    printf("%d",largest);
-    return 0;
+    printf("%d",lar);
 }
