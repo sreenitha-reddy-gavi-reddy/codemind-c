@@ -1,14 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int t,m,n,sum=0;
-    scanf("%d",&t);
-    while(t>0)
+    int i,j,rows,col,a[10][10],sum;
+    scanf("%d",&i);
+    for(rows=0;rows<i;rows++)
     {
-        scanf("%d%d",&m,&n);
-        sum=m+n;
+        for(col=0;col<2;col++)
+        {
+            scanf("%d",&a[rows][col]);
+        }
+    }
+    for(rows=0;rows<i;rows++)
+    {
+        sum=0;
+        for(col=0;col<2;col++)
+        {
+            sum=sum+a[rows][col];
+        }
         printf("%d
 ",sum);
-        t--;
     }
+    return 0;
 }
