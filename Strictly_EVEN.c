@@ -1,16 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int i,n;
+    int i,n,arr[100],c=0;
     scanf("%d",&n);
-    int a[n];
     for(i=0;i<n;i++)
     {
-        scanf("%d",&a[i]);
+        scanf("%d",&arr[i]);
     }
     for(i=0;i<n;i++)
     {
-        if(a[i]%2==0)
+        if(arr[i]%2==0)
         {
             if(i%2!=0)
             {
@@ -20,5 +19,4 @@ int main()
         }
     }
     printf("True");
-    return 0;
 }
