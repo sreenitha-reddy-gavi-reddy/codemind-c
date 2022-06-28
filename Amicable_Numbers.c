@@ -1,24 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int n1,n2,i,j,sum1=0,sum2=0;
-    scanf("%d",&n1);
-    scanf("%d",&n2);
-    for(i=1;i<n1;i++)
+    int n,m,add=0,sum=0,i;
+    scanf("%d%d",&n,&m);
+    for(i=1;i<n;i++)
     {
-        if(n1%i==0)
+        if(n%i==0)
         {
-            sum1=sum1+i;
+            sum=sum+i;
         }
     }
-    for(j=1;j<n2;j++)
+    for(i=1;i<m;i++)
     {
-        if(n2%j==0)
+        if(m%i==0)
         {
-            sum2=sum2+j;
+            add=add+i;
         }
     }
-    if(n1==sum2&&n2==sum1)
+    if(sum==m && add==n)
     {
         printf("Amicable");
     }
