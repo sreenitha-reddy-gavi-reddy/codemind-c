@@ -1,16 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,num,temp,gcd,lcm;
+    int a,b;
     scanf("%d%d",&a,&b);
-    int num1=a,num2=b;
-    while(b!=0)
+    int lcm=(a>b)?a:b;
+    while(1)
     {
-        temp=b;
-        b=a%b;
-        a=temp;
+        if(lcm%a==0&&lcm%b==0)
+        break;
+        lcm++;
     }
-    gcd=a;lcm=(num1*num2)/gcd;
     printf("%d",lcm);
     return 0;
 }
