@@ -1,18 +1,16 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
-    int m,n;
-    float p;
-    scanf("%d",&n);
-    p=sqrt(n);
-    m=p;
-    if(m==p)
+    int i,number;
+    scanf("%d",&number);
+    for(i=0;i<=number;i++)
     {
-        printf("True");
+        if(number==i*i)
+        {
+            printf("True");
+            return 0;
+        }
     }
-    else
-    {
-        printf("False");
-    }
+    printf("False");
+    return 0;
 }
