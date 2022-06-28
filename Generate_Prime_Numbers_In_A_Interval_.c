@@ -1,23 +1,27 @@
 #include<stdio.h>
+int factors(int num)
+{
+    int k=0,i;
+    for(i=1;i<=num;i++)
+    {
+        if(num%i==0)
+        {
+            k++;
+        }
+    }
+    return k;
+}
 int main()
 {
-    int fact,i,j,n1,n2;
-    scanf("%d%d",&n1,&n2);
-    for(i=n1;i<n2;i++)
+    int n,m,i,j,c=0,k;
+    scanf("%d%d",&n,&m);
+    for(i=n;i<=m;i++)
     {
-        fact=0;
-        for(j=1;j<=i;j++)
-        {
-            if(i%j==0)
-            {
-                fact++;
-            }
-        }
-        if(fact==2)
+        k=factors(i);
+        if(k==2)
         {
             printf("%d
 ",i);
         }
     }
-    return 0;
 }
