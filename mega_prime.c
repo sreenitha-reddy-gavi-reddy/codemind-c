@@ -1,40 +1,55 @@
 #include<stdio.h>
-bool isprime(int n)
+int isprime(int n)
 {
-    for( int i=2;i<=n/2;i++)
+    int p=0,i;
+    for(i=1;i<=n;i++)
     {
         if(n%i==0)
         {
-            return false;
+            p++;
         }
     }
-    return true;
-}
-bool isDigitprime(int n)
-{
-    int temp=n,digit;
-    while(temp)
-    {
-        digit=temp%10;
-        if(digit!=2 && digit!=3 && digit!=5 && digit!=7)
-        {
-            return false;
-        }
-        temp=temp/10;
-    }
-    return true;
-}
-bool isFullprime(int n)
-{
-    return(isDigitprime(n)&&isprime(n));
+    return p;
 }
 int main()
 {
-    int n;
+    int n,rem,k,fc=0,p,i;
     scanf("%d",&n);
-    if(isFullprime(n))
+    p=isprime(n);
+    if(p==2)
     {
-        printf("Mega Prime");
+        while(n!=0)
+        {
+            rem=n%10;
+            n=n/10;
+            if(rem!=0)
+            {
+                for(i=1;i<=rem;i++)
+                {
+                    if(rem%i==0)
+                    {
+                        fc++;
+                    }
+                }
+                if(fc==2)
+                {
+                    k=1;
+                }
+                else
+                {
+                    k=0;
+                }
+                fc=0;
+            }
+        }
+        if(k==1)
+        {
+            printf("Mega Prime");
+        }
+        else
+        {
+            printf("Not Mega Prime");
+        }
     }
     else
     {
