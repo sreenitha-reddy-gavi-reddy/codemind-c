@@ -1,17 +1,17 @@
 #include<stdio.h>
 #include<math.h>
-int main()
+int main ()
 {
     int m,n,i,j,count=0,c=0;
     scanf("%d%d",&m,&n);
     if(m==1)
     m=2;
-    for(i=m;i<=n;i++)
+    for(j=m;j<=n;j++)
     {
         count=0;
-        for(j=2;j<=sqrt(i);j++)
+        for(i=2;i<=sqrt(j);i++)
         {
-            if(i%j==0)
+            if(j%i==0)
             count++;
         }
         if(count==0)
