@@ -1,17 +1,17 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,flag;
+    int n,i,k=0;
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
         if(i*(i+1)==n)
         {
-            flag=1;
+            k=1;
             break;
         }
     }
-    if(flag==1)
+    if(k==1)
     {
         printf("YES");
     }
