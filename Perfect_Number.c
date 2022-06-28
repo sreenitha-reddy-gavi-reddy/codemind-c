@@ -1,15 +1,27 @@
 #include<stdio.h>
+int perfect_num(int n)
+{
+    int sum=0,i;
+    for(i=1;i<n;i++)
+    {
+        if(n%i==0)
+        {
+            sum=sum+i;
+        }
+    }
+    return sum;
+}
 int main()
 {
-    int i,num,sum=0;
-    scanf("%d",&num);
-    for(i=1;i<num;i++)
+    int n,k;
+    scanf("%d",&n);
+    k=perfect_num(n);
+    if(k==n)
     {
-        if(num%i==0)
-        sum=sum+i;
+        printf("True");
     }
-    if(sum==num)
-    printf("True");
     else
-    printf("False");
+    {
+        printf("False");
+    }
 }
