@@ -2,32 +2,34 @@
 #include<math.h>
 int main()
 {
-    long n,t,r=0,c,d;
-    scanf("%ld",&n);
-    while(1)
+    int n,p,r=0,c,d;
+    scanf("%d",&n);
+    while(n!=0)
     {
         n++;
-        t=n;
-        while(t)
+        p=n;
+        while(p!=0)
         {
             r=r*10;
-            r=r+t%10;
-            t=t/10;
+            r=r+p%10;
+            p=p/10;
         }
         if(r==n)
         {
-            d=(int)sqrt(n);
+            d=sqrt(n);
             for(c=2;c<=d;c++)
             {
                 if(n%c==0)
-                break;
+                {
+                    break;
+                }
             }
             if(c==d+1)
-            break;
+            {
+                break;
+            }
         }
         r=0;
     }
-    printf("%d
-",n);
-    return 0;
+    printf("%d",n);
 }
